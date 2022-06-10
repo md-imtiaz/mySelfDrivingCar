@@ -1,8 +1,11 @@
 import pygame
+from os import path
 pygame.init()
 window = pygame.display.set_mode((1200, 400))
-track = pygame.image.load(r"D:\pythonUniverse\galaxiOfProgrammingHeros\pythonProject\mySelfDrivingCar\track6.png")
-car = pygame.image.load(r"D:\pythonUniverse\galaxiOfProgrammingHeros\pythonProject\mySelfDrivingCar\tesla.png")
+# track = pygame.image.load(r"D:\pythonUniverse\galaxiOfProgrammingHeros\pythonProject\mySelfDrivingCar\track6.png")
+track = pygame.image.load(path.join(path.dirname(__file__), 'track6.png'))
+# car = pygame.image.load(r"D:\pythonUniverse\galaxiOfProgrammingHeros\pythonProject\mySelfDrivingCar\tesla.png")
+car = pygame.image.load(path.join(path.dirname(__file__), 'tesla.png'))
 car = pygame.transform.scale(car, (30, 60))
 car_x = 150
 car_y = 300
